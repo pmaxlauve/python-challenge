@@ -1,4 +1,4 @@
-filepath = "C:\\Users\\pmaxl\\OneDrive\\Desktop\\BootCamp\\Homework\\wk3_HW\\python-challenge\\PyPoll\\Resources\\00_Homework Assignments Instructions & Data_Week3_Instructions_PyPoll_Resources_election_data.csv"
+filepath = "C:\\Users\\pmaxl\\OneDrive\\Desktop\\BootCamp\\Homework\\wk3_HW\\python-challenge\\PyPoll\\Resources\\PyPoll_data.csv"
 
 
 
@@ -33,8 +33,8 @@ vote_count = []
     #loop over poll_data to find the total votes for each candidate and assign it to 'vote_count'
 for x in Candidate:
     
-    votes = poll_data[poll_data["Candidate"] == x].count()
-    vote_count.append(votes[1])
+    votes = (poll_data["Candidate"] == x).sum()
+    vote_count.append(votes)
     
 
     #zip vote_count and Candidate together to form 1 df 'candidate_summary
