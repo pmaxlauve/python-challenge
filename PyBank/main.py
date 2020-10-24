@@ -36,7 +36,7 @@ for i in range(len(bank_data["Profit/Losses"]) - 1):
 bank_data["Profit Change"] = Profit_Change
 
     #calculate the mean of 'bank_data["Profit Change"]'
-avg_change = bank_data["Profit Change"].mean()
+avg_change = bank_data["Profit Change"].sum()/85
 
     #format 'avg_change'
 avg_change_rounded = "{:.2f}".format(avg_change)
